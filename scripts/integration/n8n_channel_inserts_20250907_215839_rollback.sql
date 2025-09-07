@@ -1,0 +1,224 @@
+-- =========================================
+-- N8N Integration Channel Master Rollback
+-- =========================================
+-- 
+-- Generated: 2025-09-07T21:58:39.527709
+-- Total Channels to Remove: 200
+-- Target Table: saas_channel_master
+-- Database: catalog-edge-db
+--
+-- CAUTION: This will delete 200 channel records!
+--
+-- Usage:
+--   psql -h DB_HOST -U DB_USER -d catalog-edge-db -f n8n_channel_inserts_20250907_215839_rollback.sql
+-- =========================================
+
+-- Start transaction
+BEGIN;
+
+DELETE FROM saas_channel_master WHERE channel_key = 'LOOKER';
+DELETE FROM saas_channel_master WHERE channel_key = 'POWERBI';
+DELETE FROM saas_channel_master WHERE channel_key = 'TABLEAU';
+DELETE FROM saas_channel_master WHERE channel_key = 'FACEBOOKPIXEL';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLEADS';
+DELETE FROM saas_channel_master WHERE channel_key = 'POSTHOG';
+DELETE FROM saas_channel_master WHERE channel_key = 'HEAP';
+DELETE FROM saas_channel_master WHERE channel_key = 'FULLSTORY';
+DELETE FROM saas_channel_master WHERE channel_key = 'HOTJAR';
+DELETE FROM saas_channel_master WHERE channel_key = 'SEGMENT';
+DELETE FROM saas_channel_master WHERE channel_key = 'AMPLITUDE';
+DELETE FROM saas_channel_master WHERE channel_key = 'MIXPANEL';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLE_ANALYTICS';
+DELETE FROM saas_channel_master WHERE channel_key = 'REDIS';
+DELETE FROM saas_channel_master WHERE channel_key = 'MONGODB';
+DELETE FROM saas_channel_master WHERE channel_key = 'POSTGRESQL';
+DELETE FROM saas_channel_master WHERE channel_key = 'MYSQL';
+DELETE FROM saas_channel_master WHERE channel_key = 'PINGDOM';
+DELETE FROM saas_channel_master WHERE channel_key = 'UPTIMEROBOT';
+DELETE FROM saas_channel_master WHERE channel_key = 'PROMETHEUS';
+DELETE FROM saas_channel_master WHERE channel_key = 'GRAFANA';
+DELETE FROM saas_channel_master WHERE channel_key = 'SENTRY';
+DELETE FROM saas_channel_master WHERE channel_key = 'NEWRELIC';
+DELETE FROM saas_channel_master WHERE channel_key = 'DATADOG';
+DELETE FROM saas_channel_master WHERE channel_key = 'VULTR';
+DELETE FROM saas_channel_master WHERE channel_key = 'LINODE';
+DELETE FROM saas_channel_master WHERE channel_key = 'DIGITALOCEAN';
+DELETE FROM saas_channel_master WHERE channel_key = 'AZURE';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLECLOUD';
+DELETE FROM saas_channel_master WHERE channel_key = 'AWSLAMBDA';
+DELETE FROM saas_channel_master WHERE channel_key = 'AWSEC2';
+DELETE FROM saas_channel_master WHERE channel_key = 'GITHUBACTIONS';
+DELETE FROM saas_channel_master WHERE channel_key = 'TRAVISCI';
+DELETE FROM saas_channel_master WHERE channel_key = 'CIRCLECI';
+DELETE FROM saas_channel_master WHERE channel_key = 'JENKINS';
+DELETE FROM saas_channel_master WHERE channel_key = 'SHORTCUT';
+DELETE FROM saas_channel_master WHERE channel_key = 'YOUTRACK';
+DELETE FROM saas_channel_master WHERE channel_key = 'LINEAR';
+DELETE FROM saas_channel_master WHERE channel_key = 'JIRA';
+DELETE FROM saas_channel_master WHERE channel_key = 'AZUREDEVOPS';
+DELETE FROM saas_channel_master WHERE channel_key = 'BITBUCKET';
+DELETE FROM saas_channel_master WHERE channel_key = 'GITLAB';
+DELETE FROM saas_channel_master WHERE channel_key = 'GITHUB';
+DELETE FROM saas_channel_master WHERE channel_key = 'WOLFRAM';
+DELETE FROM saas_channel_master WHERE channel_key = 'MONKEYLEARN';
+DELETE FROM saas_channel_master WHERE channel_key = 'SENTIMENTAI';
+DELETE FROM saas_channel_master WHERE channel_key = 'TEXTRAZOR';
+DELETE FROM saas_channel_master WHERE channel_key = 'CLARIFAI';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLEVISION';
+DELETE FROM saas_channel_master WHERE channel_key = 'AZURECOGNITIVE';
+DELETE FROM saas_channel_master WHERE channel_key = 'AMAZONCOMPREHEND';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLETRANSLATE';
+DELETE FROM saas_channel_master WHERE channel_key = 'DEEPL';
+DELETE FROM saas_channel_master WHERE channel_key = 'ASSEMBLYAI';
+DELETE FROM saas_channel_master WHERE channel_key = 'ELEVENLABS';
+DELETE FROM saas_channel_master WHERE channel_key = 'DALLE';
+DELETE FROM saas_channel_master WHERE channel_key = 'MIDJOURNEY';
+DELETE FROM saas_channel_master WHERE channel_key = 'STABILITYAI';
+DELETE FROM saas_channel_master WHERE channel_key = 'REPLICATE';
+DELETE FROM saas_channel_master WHERE channel_key = 'HUGGINGFACE';
+DELETE FROM saas_channel_master WHERE channel_key = 'COHERE';
+DELETE FROM saas_channel_master WHERE channel_key = 'ANTHROPIC';
+DELETE FROM saas_channel_master WHERE channel_key = 'OPENAI';
+DELETE FROM saas_channel_master WHERE channel_key = 'SNAPCHAT';
+DELETE FROM saas_channel_master WHERE channel_key = 'BANDCAMP';
+DELETE FROM saas_channel_master WHERE channel_key = 'SOUNDCLOUD';
+DELETE FROM saas_channel_master WHERE channel_key = 'SPOTIFY';
+DELETE FROM saas_channel_master WHERE channel_key = 'TWITCH';
+DELETE FROM saas_channel_master WHERE channel_key = 'VIMEO';
+DELETE FROM saas_channel_master WHERE channel_key = 'FLICKR';
+DELETE FROM saas_channel_master WHERE channel_key = 'PEXELS';
+DELETE FROM saas_channel_master WHERE channel_key = 'UNSPLASH';
+DELETE FROM saas_channel_master WHERE channel_key = 'PRODUCTHUNT';
+DELETE FROM saas_channel_master WHERE channel_key = 'HACKERNEWS';
+DELETE FROM saas_channel_master WHERE channel_key = 'DEVTO';
+DELETE FROM saas_channel_master WHERE channel_key = 'SUBSTACK';
+DELETE FROM saas_channel_master WHERE channel_key = 'GHOST';
+DELETE FROM saas_channel_master WHERE channel_key = 'WORDPRESS';
+DELETE FROM saas_channel_master WHERE channel_key = 'MEDIUM';
+DELETE FROM saas_channel_master WHERE channel_key = 'MASTODON';
+DELETE FROM saas_channel_master WHERE channel_key = 'REDDIT';
+DELETE FROM saas_channel_master WHERE channel_key = 'PINTEREST';
+DELETE FROM saas_channel_master WHERE channel_key = 'TIKTOK';
+DELETE FROM saas_channel_master WHERE channel_key = 'YOUTUBE';
+DELETE FROM saas_channel_master WHERE channel_key = 'INSTAGRAM';
+DELETE FROM saas_channel_master WHERE channel_key = 'FACEBOOK';
+DELETE FROM saas_channel_master WHERE channel_key = 'LINKEDIN';
+DELETE FROM saas_channel_master WHERE channel_key = 'TWITTER';
+DELETE FROM saas_channel_master WHERE channel_key = 'CANVA';
+DELETE FROM saas_channel_master WHERE channel_key = 'FIGMA';
+DELETE FROM saas_channel_master WHERE channel_key = 'MIRO';
+DELETE FROM saas_channel_master WHERE channel_key = 'WHEN2MEET';
+DELETE FROM saas_channel_master WHERE channel_key = 'ICALENDAR';
+DELETE FROM saas_channel_master WHERE channel_key = 'RESCUETIME';
+DELETE FROM saas_channel_master WHERE channel_key = 'CLOCKWISE';
+DELETE FROM saas_channel_master WHERE channel_key = 'HARVEST';
+DELETE FROM saas_channel_master WHERE channel_key = 'TOGGL';
+DELETE FROM saas_channel_master WHERE channel_key = 'SHAREPOINT';
+DELETE FROM saas_channel_master WHERE channel_key = 'CONFLUENCE';
+DELETE FROM saas_channel_master WHERE channel_key = 'EVERNOTE';
+DELETE FROM saas_channel_master WHERE channel_key = 'ONENOTE';
+DELETE FROM saas_channel_master WHERE channel_key = 'OBSIDIAN';
+DELETE FROM saas_channel_master WHERE channel_key = 'SFTP';
+DELETE FROM saas_channel_master WHERE channel_key = 'FTP';
+DELETE FROM saas_channel_master WHERE channel_key = 'AMAZONS3';
+DELETE FROM saas_channel_master WHERE channel_key = 'BOX';
+DELETE FROM saas_channel_master WHERE channel_key = 'DROPBOX';
+DELETE FROM saas_channel_master WHERE channel_key = 'SMARTSHEET';
+DELETE FROM saas_channel_master WHERE channel_key = 'WRIKE';
+DELETE FROM saas_channel_master WHERE channel_key = 'TODOIST';
+DELETE FROM saas_channel_master WHERE channel_key = 'CODA';
+DELETE FROM saas_channel_master WHERE channel_key = 'BASEROW';
+DELETE FROM saas_channel_master WHERE channel_key = 'CLICKUP';
+DELETE FROM saas_channel_master WHERE channel_key = 'MONDAY';
+DELETE FROM saas_channel_master WHERE channel_key = 'ASANA';
+DELETE FROM saas_channel_master WHERE channel_key = 'TRELLO';
+DELETE FROM saas_channel_master WHERE channel_key = 'AIRTABLE';
+DELETE FROM saas_channel_master WHERE channel_key = 'NOTION';
+DELETE FROM saas_channel_master WHERE channel_key = 'MICROSOFTTODO';
+DELETE FROM saas_channel_master WHERE channel_key = 'MICROSOFT_EXCEL';
+DELETE FROM saas_channel_master WHERE channel_key = 'MICROSOFT_ONEDRIVE';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLETASKS';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLE_CALENDAR';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLEFORMS';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLESLIDES';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLE_DOCS';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLE_SHEETS';
+DELETE FROM saas_channel_master WHERE channel_key = 'GOOGLE_DRIVE';
+DELETE FROM saas_channel_master WHERE channel_key = 'LEADFEEDER';
+DELETE FROM saas_channel_master WHERE channel_key = 'BOOKINGCOM';
+DELETE FROM saas_channel_master WHERE channel_key = 'ACUITYSCHEDULING';
+DELETE FROM saas_channel_master WHERE channel_key = 'SURVEYMONKEY';
+DELETE FROM saas_channel_master WHERE channel_key = 'FORMSTACK';
+DELETE FROM saas_channel_master WHERE channel_key = 'WUFOO';
+DELETE FROM saas_channel_master WHERE channel_key = 'JOTFORM';
+DELETE FROM saas_channel_master WHERE channel_key = 'CRISP';
+DELETE FROM saas_channel_master WHERE channel_key = 'DRIFT';
+DELETE FROM saas_channel_master WHERE channel_key = 'HELPSCOUT';
+DELETE FROM saas_channel_master WHERE channel_key = 'FRESHDESK';
+DELETE FROM saas_channel_master WHERE channel_key = 'MAILJET';
+DELETE FROM saas_channel_master WHERE channel_key = 'GETRESPONSE';
+DELETE FROM saas_channel_master WHERE channel_key = 'ACTIVE_CAMPAIGN';
+DELETE FROM saas_channel_master WHERE channel_key = 'CONVERTKIT';
+DELETE FROM saas_channel_master WHERE channel_key = 'AWEBER';
+DELETE FROM saas_channel_master WHERE channel_key = 'CAMPAIGN_MONITOR';
+DELETE FROM saas_channel_master WHERE channel_key = 'CONSTANT_CONTACT';
+DELETE FROM saas_channel_master WHERE channel_key = 'CLOSECOM';
+DELETE FROM saas_channel_master WHERE channel_key = 'FRESHSALES';
+DELETE FROM saas_channel_master WHERE channel_key = 'COPPER';
+DELETE FROM saas_channel_master WHERE channel_key = 'ZOHOCRM';
+DELETE FROM saas_channel_master WHERE channel_key = 'CALENDLY';
+DELETE FROM saas_channel_master WHERE channel_key = 'TYPEFORM';
+DELETE FROM saas_channel_master WHERE channel_key = 'ZENDESK';
+DELETE FROM saas_channel_master WHERE channel_key = 'INTERCOM';
+DELETE FROM saas_channel_master WHERE channel_key = 'MAILCHIMP';
+DELETE FROM saas_channel_master WHERE channel_key = 'PIPEDRIVE';
+DELETE FROM saas_channel_master WHERE channel_key = 'SALESFORCE';
+DELETE FROM saas_channel_master WHERE channel_key = 'HUBSPOT';
+DELETE FROM saas_channel_master WHERE channel_key = 'SQUARESPACE';
+DELETE FROM saas_channel_master WHERE channel_key = 'BRAINTREE';
+DELETE FROM saas_channel_master WHERE channel_key = 'ADYEN';
+DELETE FROM saas_channel_master WHERE channel_key = 'HELLOSIGN';
+DELETE FROM saas_channel_master WHERE channel_key = 'DOCUSIGN';
+DELETE FROM saas_channel_master WHERE channel_key = 'PANDADOC';
+DELETE FROM saas_channel_master WHERE channel_key = 'INVOICENINJA';
+DELETE FROM saas_channel_master WHERE channel_key = 'WAVE';
+DELETE FROM saas_channel_master WHERE channel_key = 'FRESHBOOKS';
+DELETE FROM saas_channel_master WHERE channel_key = 'LEMONSQUEEZY';
+DELETE FROM saas_channel_master WHERE channel_key = 'PADDLE';
+DELETE FROM saas_channel_master WHERE channel_key = 'RECURLY';
+DELETE FROM saas_channel_master WHERE channel_key = 'CHARGEBEE';
+DELETE FROM saas_channel_master WHERE channel_key = 'EBAY';
+DELETE FROM saas_channel_master WHERE channel_key = 'AMAZON';
+DELETE FROM saas_channel_master WHERE channel_key = 'ETSY';
+DELETE FROM saas_channel_master WHERE channel_key = 'MAGENTO2';
+DELETE FROM saas_channel_master WHERE channel_key = 'BIGCOMMERCE';
+DELETE FROM saas_channel_master WHERE channel_key = 'XERO';
+DELETE FROM saas_channel_master WHERE channel_key = 'QUICKBOOKS';
+DELETE FROM saas_channel_master WHERE channel_key = 'SQUARE';
+DELETE FROM saas_channel_master WHERE channel_key = 'PAYPAL';
+DELETE FROM saas_channel_master WHERE channel_key = 'WOOCOMMERCE';
+DELETE FROM saas_channel_master WHERE channel_key = 'STRIPE';
+DELETE FROM saas_channel_master WHERE channel_key = 'SHOPIFY';
+DELETE FROM saas_channel_master WHERE channel_key = 'SMTP';
+DELETE FROM saas_channel_master WHERE channel_key = 'IMAP';
+DELETE FROM saas_channel_master WHERE channel_key = 'SIGNAL';
+DELETE FROM saas_channel_master WHERE channel_key = 'ROCKETCHAT';
+DELETE FROM saas_channel_master WHERE channel_key = 'MATTERMOST';
+DELETE FROM saas_channel_master WHERE channel_key = 'SENDINBLUE';
+DELETE FROM saas_channel_master WHERE channel_key = 'AMAZONSES';
+DELETE FROM saas_channel_master WHERE channel_key = 'VONAGE';
+DELETE FROM saas_channel_master WHERE channel_key = 'WHATSAPP';
+DELETE FROM saas_channel_master WHERE channel_key = 'TELEGRAM';
+DELETE FROM saas_channel_master WHERE channel_key = 'TWILIO';
+DELETE FROM saas_channel_master WHERE channel_key = 'SENDGRID';
+DELETE FROM saas_channel_master WHERE channel_key = 'MICROSOFT_OUTLOOK';
+DELETE FROM saas_channel_master WHERE channel_key = 'GMAIL';
+DELETE FROM saas_channel_master WHERE channel_key = 'MICROSOFT_TEAMS';
+DELETE FROM saas_channel_master WHERE channel_key = 'DISCORD';
+DELETE FROM saas_channel_master WHERE channel_key = 'SLACK';
+
+-- Commit transaction
+COMMIT;
+
+-- Verification: Check remaining channels
+SELECT COUNT(*) as remaining_channels FROM saas_channel_master;
