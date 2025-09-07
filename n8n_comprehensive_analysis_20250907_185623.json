@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-09-07T18:56:23.826668",
+  "analysis": {
+    "total_integrations": 23,
+    "categories": {
+      "Sales": 3,
+      "Communication": 5,
+      "Productivity": 5,
+      "Marketing": 3,
+      "Social Media": 2,
+      "AI": 2,
+      "Development": 2,
+      "Analytics": 1
+    },
+    "auth_types": {
+      "api_key": 12,
+      "oauth2": 10,
+      "bot_token": 1
+    },
+    "total_operations": 79,
+    "average_operations_per_integration": 3.4
+  }
+}

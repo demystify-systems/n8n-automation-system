@@ -1,0 +1,504 @@
+{
+  "timestamp": "2025-09-07T18:56:23.826257",
+  "total_integrations": 23,
+  "source": "Comprehensive sample based on real N8N integrations",
+  "integrations": [
+    {
+      "node_type": "n8n-nodes-base.shopify",
+      "display_name": "Shopify",
+      "description": "Consume the Shopify API",
+      "category": "Sales",
+      "subcategory": "E-Commerce",
+      "icon_url": "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/nodes-base/nodes/Shopify/shopify.svg",
+      "credentials": [
+        "shopifyApi"
+      ],
+      "resources": [
+        "product",
+        "order",
+        "customer",
+        "inventory"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.stripe",
+      "display_name": "Stripe",
+      "description": "Consume the Stripe API",
+      "category": "Sales",
+      "subcategory": "Payment Processing",
+      "credentials": [
+        "stripeApi"
+      ],
+      "resources": [
+        "customer",
+        "charge",
+        "subscription",
+        "invoice"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.woocommerce",
+      "display_name": "WooCommerce",
+      "description": "Consume the WooCommerce API",
+      "category": "Sales",
+      "subcategory": "E-Commerce",
+      "credentials": [
+        "wooCommerceApi"
+      ],
+      "resources": [
+        "product",
+        "order",
+        "customer"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.slack",
+      "display_name": "Slack",
+      "description": "Consume the Slack API",
+      "category": "Communication",
+      "subcategory": "Team Chat",
+      "credentials": [
+        "slackApi"
+      ],
+      "resources": [
+        "message",
+        "channel",
+        "user"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "oauth2"
+    },
+    {
+      "node_type": "n8n-nodes-base.discord",
+      "display_name": "Discord",
+      "description": "Consume the Discord API",
+      "category": "Communication",
+      "subcategory": "Team Chat",
+      "credentials": [
+        "discordApi"
+      ],
+      "resources": [
+        "message",
+        "channel",
+        "guild"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "bot_token"
+    },
+    {
+      "node_type": "n8n-nodes-base.gmail",
+      "display_name": "Gmail",
+      "description": "Consume the Gmail API",
+      "category": "Communication",
+      "subcategory": "Email",
+      "credentials": [
+        "gmailOAuth2"
+      ],
+      "resources": [
+        "message",
+        "draft",
+        "label"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "oauth2"
+    },
+    {
+      "node_type": "n8n-nodes-base.microsoftoutlook",
+      "display_name": "Microsoft Outlook",
+      "description": "Consume the Microsoft Outlook API",
+      "category": "Communication",
+      "subcategory": "Email",
+      "credentials": [
+        "microsoftOutlookOAuth2"
+      ],
+      "resources": [
+        "message",
+        "calendar",
+        "contact"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "oauth2"
+    },
+    {
+      "node_type": "n8n-nodes-base.twilio",
+      "display_name": "Twilio",
+      "description": "Send SMS and make calls using Twilio",
+      "category": "Communication",
+      "subcategory": "SMS/Voice",
+      "credentials": [
+        "twilioApi"
+      ],
+      "resources": [
+        "message",
+        "call"
+      ],
+      "operations": [
+        "create",
+        "read"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.googledrive",
+      "display_name": "Google Drive",
+      "description": "Consume the Google Drive API",
+      "category": "Productivity",
+      "subcategory": "File Storage",
+      "credentials": [
+        "googleDriveOAuth2"
+      ],
+      "resources": [
+        "file",
+        "folder"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "oauth2"
+    },
+    {
+      "node_type": "n8n-nodes-base.googlesheets",
+      "display_name": "Google Sheets",
+      "description": "Consume the Google Sheets API",
+      "category": "Productivity",
+      "subcategory": "Spreadsheets",
+      "credentials": [
+        "googleSheetsOAuth2"
+      ],
+      "resources": [
+        "spreadsheet",
+        "worksheet",
+        "row"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "oauth2"
+    },
+    {
+      "node_type": "n8n-nodes-base.notion",
+      "display_name": "Notion",
+      "description": "Consume the Notion API",
+      "category": "Productivity",
+      "subcategory": "Knowledge Management",
+      "credentials": [
+        "notionApi"
+      ],
+      "resources": [
+        "page",
+        "database",
+        "block"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "oauth2"
+    },
+    {
+      "node_type": "n8n-nodes-base.airtable",
+      "display_name": "Airtable",
+      "description": "Consume the Airtable API",
+      "category": "Productivity",
+      "subcategory": "Database",
+      "credentials": [
+        "airtableApi"
+      ],
+      "resources": [
+        "record",
+        "base",
+        "table"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.trello",
+      "display_name": "Trello",
+      "description": "Consume the Trello API",
+      "category": "Productivity",
+      "subcategory": "Project Management",
+      "credentials": [
+        "trelloApi"
+      ],
+      "resources": [
+        "board",
+        "card",
+        "list"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.hubspot",
+      "display_name": "HubSpot",
+      "description": "Consume the HubSpot API",
+      "category": "Marketing",
+      "subcategory": "CRM",
+      "credentials": [
+        "hubspotApi"
+      ],
+      "resources": [
+        "contact",
+        "company",
+        "deal",
+        "ticket"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.salesforce",
+      "display_name": "Salesforce",
+      "description": "Consume the Salesforce API",
+      "category": "Marketing",
+      "subcategory": "CRM",
+      "credentials": [
+        "salesforceOAuth2"
+      ],
+      "resources": [
+        "lead",
+        "opportunity",
+        "account",
+        "contact"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "oauth2"
+    },
+    {
+      "node_type": "n8n-nodes-base.mailchimp",
+      "display_name": "Mailchimp",
+      "description": "Consume the Mailchimp API",
+      "category": "Marketing",
+      "subcategory": "Email Marketing",
+      "credentials": [
+        "mailchimpApi"
+      ],
+      "resources": [
+        "campaign",
+        "list",
+        "member"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.twitter",
+      "display_name": "Twitter/X",
+      "description": "Consume the Twitter API",
+      "category": "Social Media",
+      "subcategory": "Social Networking",
+      "credentials": [
+        "twitterOAuth2"
+      ],
+      "resources": [
+        "tweet",
+        "user",
+        "media"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "delete"
+      ],
+      "auth_type": "oauth2"
+    },
+    {
+      "node_type": "n8n-nodes-base.linkedin",
+      "display_name": "LinkedIn",
+      "description": "Consume the LinkedIn API",
+      "category": "Social Media",
+      "subcategory": "Professional Networking",
+      "credentials": [
+        "linkedInOAuth2"
+      ],
+      "resources": [
+        "post",
+        "profile",
+        "company"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update"
+      ],
+      "auth_type": "oauth2"
+    },
+    {
+      "node_type": "n8n-nodes-base.openai",
+      "display_name": "OpenAI",
+      "description": "Consume OpenAI API",
+      "category": "AI",
+      "subcategory": "Language Models",
+      "credentials": [
+        "openAiApi"
+      ],
+      "resources": [
+        "completion",
+        "chat",
+        "image",
+        "embedding"
+      ],
+      "operations": [
+        "create"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.anthropic",
+      "display_name": "Anthropic Claude",
+      "description": "Consume Anthropic Claude API",
+      "category": "AI",
+      "subcategory": "Language Models",
+      "credentials": [
+        "anthropicApi"
+      ],
+      "resources": [
+        "completion",
+        "chat"
+      ],
+      "operations": [
+        "create"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.github",
+      "display_name": "GitHub",
+      "description": "Consume the GitHub API",
+      "category": "Development",
+      "subcategory": "Version Control",
+      "credentials": [
+        "githubApi"
+      ],
+      "resources": [
+        "repository",
+        "issue",
+        "pull_request",
+        "release"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.jira",
+      "display_name": "Jira",
+      "description": "Consume the Jira API",
+      "category": "Development",
+      "subcategory": "Issue Tracking",
+      "credentials": [
+        "jiraApi"
+      ],
+      "resources": [
+        "issue",
+        "project",
+        "user"
+      ],
+      "operations": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "auth_type": "api_key"
+    },
+    {
+      "node_type": "n8n-nodes-base.googleanalytics",
+      "display_name": "Google Analytics",
+      "description": "Consume the Google Analytics API",
+      "category": "Analytics",
+      "subcategory": "Web Analytics",
+      "credentials": [
+        "googleAnalyticsOAuth2"
+      ],
+      "resources": [
+        "report",
+        "dimension",
+        "metric"
+      ],
+      "operations": [
+        "read"
+      ],
+      "auth_type": "oauth2"
+    }
+  ]
+}
