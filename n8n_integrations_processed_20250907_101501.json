@@ -1,0 +1,660 @@
+{
+  "timestamp": "2025-09-07T10:15:01.077795",
+  "total_integrations": 4,
+  "integrations": [
+    {
+      "node_type": "n8n-nodes-base.shopify",
+      "display_name": "Shopify",
+      "description": "Consume the Shopify API",
+      "version": 1,
+      "channel_key": "SHOPIFY",
+      "category": "Sales",
+      "subcategory": "E-Commerce",
+      "icon": "file:shopify.svg",
+      "icon_url": "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/nodes-base/nodes/shopify/shopify.svg",
+      "docs_url": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.shopify/",
+      "credentials": [
+        {
+          "name": "shopifyApi",
+          "display_name": "Shopify API",
+          "documentation_url": "https://shopify.dev/api",
+          "properties": [
+            {
+              "name": "shopSubdomain",
+              "display_name": "Shop Subdomain",
+              "type": "string",
+              "required": true,
+              "sensitive": false,
+              "default": ""
+            },
+            {
+              "name": "apiKey",
+              "display_name": "API Key",
+              "type": "string",
+              "required": true,
+              "sensitive": false,
+              "default": ""
+            },
+            {
+              "name": "apiSecret",
+              "display_name": "API Secret",
+              "type": "string",
+              "required": true,
+              "sensitive": true,
+              "default": ""
+            }
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "name": "Product",
+          "value": "product",
+          "description": ""
+        },
+        {
+          "name": "Order",
+          "value": "order",
+          "description": ""
+        },
+        {
+          "name": "Customer",
+          "value": "customer",
+          "description": ""
+        }
+      ],
+      "operations": [
+        {
+          "name": "Create",
+          "value": "create",
+          "description": "Create a product"
+        },
+        {
+          "name": "Get",
+          "value": "get",
+          "description": "Get a product"
+        },
+        {
+          "name": "Get All",
+          "value": "getAll",
+          "description": "Get all products"
+        },
+        {
+          "name": "Update",
+          "value": "update",
+          "description": "Update a product"
+        },
+        {
+          "name": "Delete",
+          "value": "delete",
+          "description": "Delete a product"
+        }
+      ],
+      "capabilities": {
+        "supports": [
+          "delete",
+          "update",
+          "create",
+          "read"
+        ],
+        "operations": [
+          "getAll",
+          "get",
+          "update",
+          "create",
+          "delete"
+        ],
+        "resources": [
+          "order",
+          "customer",
+          "product"
+        ],
+        "auth_types": [
+          "api_key"
+        ],
+        "rate_limits": {
+          "requests_per_minute": 60,
+          "burst_limit": 120
+        },
+        "webhooks_supported": false
+      },
+      "default_config": {
+        "node_type": "n8n-nodes-base.shopify",
+        "version": 1,
+        "timeout": 30000,
+        "retry_attempts": 3
+      },
+      "raw_properties": [
+        {
+          "displayName": "Resource",
+          "name": "resource",
+          "type": "options",
+          "options": [
+            {
+              "name": "Product",
+              "value": "product"
+            },
+            {
+              "name": "Order",
+              "value": "order"
+            },
+            {
+              "name": "Customer",
+              "value": "customer"
+            }
+          ],
+          "default": "product"
+        },
+        {
+          "displayName": "Operation",
+          "name": "operation",
+          "type": "options",
+          "displayOptions": {
+            "show": {
+              "resource": [
+                "product"
+              ]
+            }
+          },
+          "options": [
+            {
+              "name": "Create",
+              "value": "create",
+              "description": "Create a product"
+            },
+            {
+              "name": "Get",
+              "value": "get",
+              "description": "Get a product"
+            },
+            {
+              "name": "Get All",
+              "value": "getAll",
+              "description": "Get all products"
+            },
+            {
+              "name": "Update",
+              "value": "update",
+              "description": "Update a product"
+            },
+            {
+              "name": "Delete",
+              "value": "delete",
+              "description": "Delete a product"
+            }
+          ],
+          "default": "getAll"
+        }
+      ],
+      "metadata": {
+        "total_properties": 2,
+        "total_credentials": 1,
+        "has_webhook_support": false,
+        "has_oauth": false,
+        "auth_types": [
+          "api_key"
+        ]
+      }
+    },
+    {
+      "node_type": "n8n-nodes-base.slack",
+      "display_name": "Slack",
+      "description": "Consume the Slack API",
+      "version": 1,
+      "channel_key": "SLACK",
+      "category": "Communication",
+      "subcategory": "Team Chat",
+      "icon": "file:slack.svg",
+      "icon_url": "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/nodes-base/nodes/slack/slack.svg",
+      "docs_url": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.slack/",
+      "credentials": [
+        {
+          "name": "slackApi",
+          "display_name": "Slack API",
+          "documentation_url": "https://api.slack.com/",
+          "properties": [
+            {
+              "name": "botToken",
+              "display_name": "Bot Token",
+              "type": "string",
+              "required": true,
+              "sensitive": true,
+              "default": ""
+            }
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "name": "Message",
+          "value": "message",
+          "description": ""
+        },
+        {
+          "name": "Channel",
+          "value": "channel",
+          "description": ""
+        },
+        {
+          "name": "User",
+          "value": "user",
+          "description": ""
+        }
+      ],
+      "operations": [
+        {
+          "name": "Post",
+          "value": "post",
+          "description": "Post a message"
+        },
+        {
+          "name": "Update",
+          "value": "update",
+          "description": "Update a message"
+        },
+        {
+          "name": "Delete",
+          "value": "delete",
+          "description": "Delete a message"
+        }
+      ],
+      "capabilities": {
+        "supports": [
+          "delete",
+          "update",
+          "create"
+        ],
+        "operations": [
+          "delete",
+          "update",
+          "post"
+        ],
+        "resources": [
+          "channel",
+          "message",
+          "user"
+        ],
+        "auth_types": [
+          "api_key"
+        ],
+        "rate_limits": {
+          "requests_per_minute": 60,
+          "burst_limit": 120
+        },
+        "webhooks_supported": false
+      },
+      "default_config": {
+        "node_type": "n8n-nodes-base.slack",
+        "version": 1,
+        "timeout": 30000,
+        "retry_attempts": 3
+      },
+      "raw_properties": [
+        {
+          "displayName": "Resource",
+          "name": "resource",
+          "type": "options",
+          "options": [
+            {
+              "name": "Message",
+              "value": "message"
+            },
+            {
+              "name": "Channel",
+              "value": "channel"
+            },
+            {
+              "name": "User",
+              "value": "user"
+            }
+          ],
+          "default": "message"
+        },
+        {
+          "displayName": "Operation",
+          "name": "operation",
+          "type": "options",
+          "displayOptions": {
+            "show": {
+              "resource": [
+                "message"
+              ]
+            }
+          },
+          "options": [
+            {
+              "name": "Post",
+              "value": "post",
+              "description": "Post a message"
+            },
+            {
+              "name": "Update",
+              "value": "update",
+              "description": "Update a message"
+            },
+            {
+              "name": "Delete",
+              "value": "delete",
+              "description": "Delete a message"
+            }
+          ],
+          "default": "post"
+        }
+      ],
+      "metadata": {
+        "total_properties": 2,
+        "total_credentials": 1,
+        "has_webhook_support": false,
+        "has_oauth": false,
+        "auth_types": [
+          "api_key"
+        ]
+      }
+    },
+    {
+      "node_type": "n8n-nodes-base.gmail",
+      "display_name": "Gmail",
+      "description": "Consume the Gmail API",
+      "version": 1,
+      "channel_key": "GMAIL",
+      "category": "Communication",
+      "subcategory": "Email",
+      "icon": "file:gmail.svg",
+      "icon_url": "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/nodes-base/nodes/gmail/gmail.svg",
+      "docs_url": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.gmail/",
+      "credentials": [
+        {
+          "name": "gmailOAuth2",
+          "display_name": "Gmail OAuth2 API",
+          "documentation_url": "https://developers.google.com/gmail/api/auth/web-server",
+          "properties": [
+            {
+              "name": "clientId",
+              "display_name": "Client ID",
+              "type": "string",
+              "required": true,
+              "sensitive": false,
+              "default": ""
+            },
+            {
+              "name": "clientSecret",
+              "display_name": "Client Secret",
+              "type": "string",
+              "required": true,
+              "sensitive": true,
+              "default": ""
+            }
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "name": "Message",
+          "value": "message",
+          "description": ""
+        },
+        {
+          "name": "Draft",
+          "value": "draft",
+          "description": ""
+        },
+        {
+          "name": "Label",
+          "value": "label",
+          "description": ""
+        }
+      ],
+      "operations": [
+        {
+          "name": "Send",
+          "value": "send",
+          "description": "Send a message"
+        },
+        {
+          "name": "Get",
+          "value": "get",
+          "description": "Get a message"
+        },
+        {
+          "name": "Get All",
+          "value": "getAll",
+          "description": "Get all messages"
+        },
+        {
+          "name": "Delete",
+          "value": "delete",
+          "description": "Delete a message"
+        }
+      ],
+      "capabilities": {
+        "supports": [
+          "delete",
+          "create",
+          "read"
+        ],
+        "operations": [
+          "get",
+          "getAll",
+          "send",
+          "delete"
+        ],
+        "resources": [
+          "message",
+          "draft",
+          "label"
+        ],
+        "auth_types": [
+          "oauth2"
+        ],
+        "rate_limits": {
+          "requests_per_minute": 60,
+          "burst_limit": 120
+        },
+        "webhooks_supported": false
+      },
+      "default_config": {
+        "node_type": "n8n-nodes-base.gmail",
+        "version": 1,
+        "timeout": 30000,
+        "retry_attempts": 3
+      },
+      "raw_properties": [
+        {
+          "displayName": "Resource",
+          "name": "resource",
+          "type": "options",
+          "options": [
+            {
+              "name": "Message",
+              "value": "message"
+            },
+            {
+              "name": "Draft",
+              "value": "draft"
+            },
+            {
+              "name": "Label",
+              "value": "label"
+            }
+          ],
+          "default": "message"
+        },
+        {
+          "displayName": "Operation",
+          "name": "operation",
+          "type": "options",
+          "displayOptions": {
+            "show": {
+              "resource": [
+                "message"
+              ]
+            }
+          },
+          "options": [
+            {
+              "name": "Send",
+              "value": "send",
+              "description": "Send a message"
+            },
+            {
+              "name": "Get",
+              "value": "get",
+              "description": "Get a message"
+            },
+            {
+              "name": "Get All",
+              "value": "getAll",
+              "description": "Get all messages"
+            },
+            {
+              "name": "Delete",
+              "value": "delete",
+              "description": "Delete a message"
+            }
+          ],
+          "default": "send"
+        }
+      ],
+      "metadata": {
+        "total_properties": 2,
+        "total_credentials": 1,
+        "has_webhook_support": false,
+        "has_oauth": true,
+        "auth_types": [
+          "oauth2"
+        ]
+      }
+    },
+    {
+      "node_type": "n8n-nodes-base.openai",
+      "display_name": "OpenAI",
+      "description": "Consume OpenAI API",
+      "version": 1,
+      "channel_key": "OPENAI",
+      "category": "AI",
+      "subcategory": "Language Models",
+      "icon": "file:openai.svg",
+      "icon_url": "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/nodes-base/nodes/openai/openai.svg",
+      "docs_url": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.openai/",
+      "credentials": [
+        {
+          "name": "openAiApi",
+          "display_name": "OpenAI API",
+          "documentation_url": "https://platform.openai.com/api-keys",
+          "properties": [
+            {
+              "name": "apiKey",
+              "display_name": "API Key",
+              "type": "string",
+              "required": true,
+              "sensitive": true,
+              "default": ""
+            }
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "name": "Chat",
+          "value": "chat",
+          "description": ""
+        },
+        {
+          "name": "Completion",
+          "value": "completion",
+          "description": ""
+        },
+        {
+          "name": "Image",
+          "value": "image",
+          "description": ""
+        }
+      ],
+      "operations": [
+        {
+          "name": "Create",
+          "value": "create",
+          "description": "Create a chat completion"
+        }
+      ],
+      "capabilities": {
+        "supports": [
+          "create"
+        ],
+        "operations": [
+          "create"
+        ],
+        "resources": [
+          "image",
+          "completion",
+          "chat"
+        ],
+        "auth_types": [
+          "api_key"
+        ],
+        "rate_limits": {
+          "requests_per_minute": 60,
+          "burst_limit": 120
+        },
+        "webhooks_supported": false
+      },
+      "default_config": {
+        "node_type": "n8n-nodes-base.openai",
+        "version": 1,
+        "timeout": 30000,
+        "retry_attempts": 3
+      },
+      "raw_properties": [
+        {
+          "displayName": "Resource",
+          "name": "resource",
+          "type": "options",
+          "options": [
+            {
+              "name": "Chat",
+              "value": "chat"
+            },
+            {
+              "name": "Completion",
+              "value": "completion"
+            },
+            {
+              "name": "Image",
+              "value": "image"
+            }
+          ],
+          "default": "chat"
+        },
+        {
+          "displayName": "Operation",
+          "name": "operation",
+          "type": "options",
+          "displayOptions": {
+            "show": {
+              "resource": [
+                "chat"
+              ]
+            }
+          },
+          "options": [
+            {
+              "name": "Create",
+              "value": "create",
+              "description": "Create a chat completion"
+            }
+          ],
+          "default": "create"
+        }
+      ],
+      "metadata": {
+        "total_properties": 2,
+        "total_credentials": 1,
+        "has_webhook_support": false,
+        "has_oauth": false,
+        "auth_types": [
+          "api_key"
+        ]
+      }
+    }
+  ]
+}
